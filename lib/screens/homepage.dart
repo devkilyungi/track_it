@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:track_it/screens/settings.dart';
 import 'package:track_it/util/constants.dart';
 import 'package:track_it/widgets/balance_card.dart';
 import 'package:track_it/widgets/stats.dart';
@@ -33,7 +34,13 @@ class _HomePageState extends State<HomePage> {
                         style: greetingStyle,
                       ),
                       IconButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const Settings()),
+                            );
+                          },
                           icon: const Icon(
                             Icons.settings_sharp,
                             size: 34.0,

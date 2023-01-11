@@ -16,6 +16,8 @@ class MyApp extends StatelessWidget {
       home: const HomePage(),
       theme: ThemeData.light().copyWith(
         primaryColor: primaryColor,
+        appBarTheme:
+            const AppBarTheme().copyWith(backgroundColor: primaryColor),
         floatingActionButtonTheme: const FloatingActionButtonThemeData()
             .copyWith(backgroundColor: primaryColor),
       ),
