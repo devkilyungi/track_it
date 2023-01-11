@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:track_it/util/constants.dart';
 import 'package:track_it/widgets/balance_card.dart';
 import 'package:track_it/widgets/stats.dart';
-import 'package:track_it/widgets/my_transactions.dart';
+import 'package:track_it/widgets/my_transaction_card.dart';
 import 'package:track_it/widgets/add_transaction_button.dart';
 
 class HomePage extends StatefulWidget {
@@ -54,10 +54,10 @@ class _HomePageState extends State<HomePage> {
                       child: ListView.builder(
                         itemCount: 10,
                         itemBuilder: (context, index) {
-                          return const MyTransaction(
+                          return const MyTransactionCard(
                               name: 'FxTarget',
                               amount: '1170',
-                              isIncomeOrExpense: 'income');
+                              isIncomeOrExpense: 'expense');
                         },
                       ),
                     ),
@@ -65,10 +65,11 @@ class _HomePageState extends State<HomePage> {
                 )),
               ),
               verticalSpacing(8.0),
-              const AddTransactionButton(),
             ],
           ),
         ),
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+        floatingActionButton: const AddTransactionButton(),
       ),
     );
   }

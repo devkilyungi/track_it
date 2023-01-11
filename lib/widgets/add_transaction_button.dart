@@ -8,21 +8,11 @@ class AddTransactionButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: function,
-      child: Container(
-        height: 60,
-        width: 60,
-        decoration: const BoxDecoration(
-          color: primaryColor,
-          shape: BoxShape.circle,
-        ),
-        child: const Center(
-          child: Text(
-            '+',
-            style: TextStyle(color: Colors.white, fontSize: 32),
-          ),
-        ),
+    return FloatingActionButton(
+      onPressed: function,
+      child: const Icon(
+        Icons.add,
+        size: 32,
       ),
     );
   }

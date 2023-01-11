@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:track_it/util/constants.dart';
 import 'package:track_it/widgets/circle_icon.dart';
 
-class MyTransaction extends StatelessWidget {
-  const MyTransaction({
+class MyTransactionCard extends StatelessWidget {
+  const MyTransactionCard({
     Key? key,
     required this.name,
     required this.amount,
@@ -16,7 +16,7 @@ class MyTransaction extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(vertical: 5.0),
+      margin: const EdgeInsets.symmetric(vertical: 5.0),
       height: 90,
       decoration: BoxDecoration(
         color: secondaryColor,

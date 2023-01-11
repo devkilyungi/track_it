@@ -17,7 +17,7 @@ class CircleIcon extends StatelessWidget {
       ),
       child: Center(
         child: Text(
-          (isIncome == true) ? '+' : '-',
+          (isIncome == true) ? '+' : '—',
           style: const TextStyle(color: Colors.white, fontSize: 32),
         ),
       ),
