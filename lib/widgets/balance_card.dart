@@ -2,12 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:track_it/util/constants.dart';
 
 class BalanceCard extends StatelessWidget {
-  const BalanceCard({Key? key}) : super(key: key);
+  const BalanceCard({Key? key, required this.balance}) : super(key: key);
 
-  final int budget = 5000;
-  final int income = 10000;
-  final int expenses = 3000;
-  final int profit = 7000;
+  final String balance;
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +24,7 @@ class BalanceCard extends StatelessWidget {
           ),
           verticalSpacing(8.0),
           Text(
-            'Ksh. $budget',
+            'Ksh. $balance',
             style: remainingAmountStyle,
           ),
         ],

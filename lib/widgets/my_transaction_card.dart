@@ -32,8 +32,14 @@ class MyTransactionCard extends StatelessWidget {
             style: headerStyle,
           ),
           trailing: Text(
-            'Ksh. $amount',
-            style: subHeaderStyle,
+            isIncomeOrExpense == 'income'
+                ? '+' ' Ksh. $amount'
+                : '—' ' Ksh. $amount',
+            style: TextStyle(
+              fontSize: 16,
+              fontWeight: FontWeight.bold,
+              color: isIncomeOrExpense == 'income' ? Colors.green : Colors.red,
+            ),
           ),
         ),
       ),

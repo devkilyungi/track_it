@@ -2,12 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:track_it/util/constants.dart';
 
 class IncomeExpenseStats extends StatelessWidget {
-  const IncomeExpenseStats({Key? key}) : super(key: key);
+  const IncomeExpenseStats({
+    Key? key,
+    required this.income,
+    required this.expenses,
+    required this.profit,
+  }) : super(key: key);
 
-  final int budget = 5000;
-  final int income = 10000;
-  final int expenses = 3000;
-  final int profit = 7000;
+  final String income;
+  final String expenses;
+  final String profit;
 
   @override
   Widget build(BuildContext context) {

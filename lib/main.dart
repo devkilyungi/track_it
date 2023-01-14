@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:track_it/google_sheets_api.dart';
 import 'package:track_it/screens/homepage.dart';
 import 'package:track_it/util/constants.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  GoogleSheetsApi().init();
   runApp(const MyApp());
 }
 
